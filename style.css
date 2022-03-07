@@ -1,0 +1,310 @@
+/* Light Theme */
+:root {
+    /* Colors for Light Theme*/
+    --base01: #E7EAEC;
+    --base02: #CCEAE7;
+    --base03: #CCD7DA;
+    --base04: #8796B0;
+    --base05: #80CBC4;
+    --base06: #80CBC4;
+    --base07: #FFFFFF;
+    --base08: #FF5370;
+    --base09: #F76D47;
+    --base0A: #FFB62C;
+    --base0B: #91B859;
+    --base0C: #39ADB5;
+    --base0D: #6182B8;
+    --base0E: #7C4DFF;
+    --base0F: #E53935;
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Colors for Dark Theme*/
+        --base00: #282828;
+        --base01: #3c3836;
+        --base02: #504945;
+        --base03: #665c54;
+        --base04: #bdae93;
+        --base05: #d5c4a1;
+        --base06: #ebdbb2;
+        --base07: #fbf1c7;
+        --base08: #fb4934;
+        --base09: #fe8019;
+        --base0A: #fabd2f;
+        --base0B: #b8bb26;
+        --base0C: #8ec07c;
+        --base0D: #83a598;
+        --base0E: #d3869b;
+        --base0F: #d65d0e;
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    margin-bottom: 0;
+    color: white;
+}
+
+p {
+    padding-top: 2px;
+}
+
+ol {
+    padding-left: 25px;
+}
+
+b {
+    font-weight: 500;
+}
+
+img {
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+body {
+    background-color: var(--base00);
+}
+
+p,
+h1::selection {
+    color: var(--base07);
+    background: var(--base05);
+}
+
+
+/*================ Cards ================*/
+
+.card {
+    border-radius: 7px;
+    text-align: left;
+    margin: 10px 5px 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.card--front {
+    background: var(--base02);
+    padding: 25px;
+}
+
+.card--back {
+    background-color: var(--base01);
+    padding: 25px;
+    box-shadow: 0 6px 10px var(--base02);
+}
+
+/*================ Fields ================*/
+
+.card__front {
+    font-weight: 400;
+    color: var(--base06);
+    border-radius: 7px;
+}
+
+.card__back {
+    font-weight: 400;
+    color: var(--base05);
+    border-radius: 7px;
+}
+
+.card__icon {
+    position: relative;
+    text-decoration: none;
+    color: var(--base06);
+    font-size: 28px;
+    padding-bottom: 14px;
+    opacity: 80%;
+}
+
+
+/*================ Syntax Highlighting ================*/
+
+.highlight {
+
+    /* Map Rouge / Pygments Tokens to work with 'Base 16' themes */
+    border-radius: 7px;
+    padding:12px;
+    background: var(--base00);
+    color: var(--base05);
+}
+
+/**
+ * Comments
+ */
+
+.c,       /* Comment */
+.cm,      /* Comment.Multiline */
+.cp,      /* Comment.Preproc */
+.c1,      /* Comment.Single */
+.cs {     /* Comment.Special */
+    color: var(--base03);
+}
+
+/**
+ * Keywords
+ */
+
+.k,       /* Keyword */
+.kc,      /* Keyword.Constant */
+.kd,      /* Keyword.Declaration */
+.kp,      /* Keyword.Pseudo */
+.kr {     /* Keyword.Reserved */
+    color: var(--base0E);
+}
+
+.kn {     /* Keyword.Namespace */
+    color: var(--base0C);
+}
+
+.kt {     /* Keyword.Type */
+    color: var(--base0A);
+}
+
+/**
+ * Operators
+ */
+
+.o,       /* Operator */
+.ow {     /* Operator.Word */
+    color: var(--base0C)
+}
+
+/**
+ * Names
+ */
+
+.n,       /* Name */
+.nb,      /* Name.Builtin */
+.bp,      /* Name.Builtin.Pseudo */
+.ni,      /* Name.Entity */
+.nl,      /* Name.Label */
+.py {     /* Name.Property */
+    /* Default styling */
+}
+
+.nc,      /* Name.Class */
+.nn {     /* Name.Namespace */
+    color: var(--base0A);
+}
+
+.na,      /* Name.Attribute */
+.nf {     /* Name.Function */
+    color: var(--base0D);
+}
+
+.nv,      /* Name.Variable */
+.no,      /* Name.Constant */
+.vc,      /* Name.Variable.Class */
+.vg,      /* Name.Variable.Global */
+.vi {     /* Name.Variable.Instance */
+    color: var(--base08);
+}
+
+.nd {     /* Name.Decorator */
+    color: var(--base0C);
+}
+
+.nt,      /* Name.Tag */
+.nx {     /* Name.Other */
+    color: var(--base09);
+}
+
+.ne {     /* Name.Exception */
+    color: var(--base0F);
+}
+
+/**
+ * Literals
+ */
+
+.l  {     /* Literal */
+    color: var(--base09);
+}
+
+.ld {     /* Literal.Date */
+    color: var(--base0B);
+}
+
+.m,       /* Literal.Number */
+.mf,      /* Literal.Number.Float */
+.mh,      /* Literal.Number.Hex */
+.mi,      /* Literal.Number.Integer */
+.il,      /* Literal.Number.Integer.Long */
+.mo {     /* Literal.Number.Oct */
+    color: var(--base09);
+}
+
+.s,       /* Literal.String */
+.sb,      /* Literal.String.Backtick */
+.s2,      /* Literal.String.Double */
+.sh {     /* Literal.String.Heredoc */
+    color: var(--base0B);
+}
+
+.sx,      /* Literal.String.Other */
+.sr,      /* Literal.String.Regex */
+.s1,      /* Literal.String.Single */
+.ss {     /* Literal.String.Symbol */
+    color: var(--base0B);
+}
+
+.se,      /* Literal.String.Escape */
+.si {     /* Literal.String.Interpol */
+    color: var(--base09);
+}
+
+.sd {     /* Literal.String.Doc */
+    color: var(--base03)
+}
+/**
+ * Misc
+ */
+
+.p {      /* Punctuation */
+    /* Default styling */
+}
+
+.w {      /* Text.Whitespace */
+    /* Default styling */
+}
+
+.hll {    /* Highlight */
+    background-color: var(--base02);
+}
+
+.err,     /* Error */
+.gr,      /* Generic.Error */
+.gt {     /* Generic.Traceback */
+    color: var(--base0F);
+}
+
+.gs {     /* Generic.Strong */
+    font-weight: bold;
+}
+
+.ge {     /* Generic.Emph */
+    font-style: italic;
+}
+
+.gh {     /* Generic.Heading */
+    font-weight: bold;
+}
+
+.gu {     /* Generic.Subheading */
+    color: var(--base0A);
+    font-weight: bold;
+}
+
+.gp {     /* Generic.Prompt */
+    color: var(--base03);
+    font-weight: bold
+}
