@@ -1,4 +1,4 @@
 # basic16
 
-base16 themes for Anki Note Types
+base16 themes for Anki
 
